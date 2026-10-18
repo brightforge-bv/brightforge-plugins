@@ -1,0 +1,35 @@
+---
+title: Price settings
+description: Purchase fee, all-in or market price, and units. These apply to every key and dial.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+The settings under **Prices** are shared: change them on one key or dial and every Energy Prices key and dial follows.
+
+| Setting | Options |
+| --- | --- |
+| **Purchase fee** | Your supplier's fee on top of the market price, in cents per kWh **including VAT**. Empty means 0. |
+| **Show** | **All-in price** (default) · **Market price only** |
+| **Unit** | **Cents** (23.4 ct) · **Euros** (€0.234) |
+
+## How the all-in price adds up
+
+```
+all-in = (market price + purchase fee + energy tax) × 1.21
+```
+
+- **Market price:** the EPEX day-ahead price for that quarter-hour.
+- **Purchase fee:** what you entered, converted to excluding VAT.
+- **Energy tax:** the Dutch *energiebelasting* per kWh, as published with the prices.
+- **VAT:** 21%.
+
+On a Stream Deck +, linked dials show this breakdown for the selected quarter-hour.
+
+<Aside type="note" title="What is not included">
+Fixed monthly costs (*vaste leveringskosten*, *netbeheerkosten*) and the annual energy tax refund (*vermindering energiebelasting*) do not depend on when you use power, so they are left out.
+</Aside>
+
+## Market price only
+
+Shows the bare EPEX price, without fee, tax or VAT. Labels then get *(mkt)*. Handy if you compare with the price in your supplier's app, which sometimes shows the market price.

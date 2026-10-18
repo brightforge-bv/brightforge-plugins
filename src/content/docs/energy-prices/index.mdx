@@ -1,0 +1,55 @@
+---
+title: Energy Prices NL
+description: Dynamic electricity prices per quarter-hour for the Netherlands, on your Stream Deck keys and dials.
+---
+
+import { Image } from 'astro:assets';
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import icon from '../../../assets/energy-prices/icon.png';
+import keyNow from '../../../assets/energy-prices/key-now.png';
+import keyGraph from '../../../assets/energy-prices/key-now-graph.png';
+import keyLowest from '../../../assets/energy-prices/key-lowest.png';
+import dialLinked from '../../../assets/energy-prices/dial-linked.png';
+
+<Image src={icon} alt="Energy Prices NL logo" width={96} densities={[1, 2]} />
+
+On a dynamic energy contract, your price changes every quarter-hour. **Energy Prices NL** puts that price on your Stream Deck, so you can see at a glance when to run the dishwasher, charge the car or wait an hour.
+
+<div class="shots">
+	<Image class="device-shot" src={keyNow} alt="Key showing the price now: 42.2 ct/kWh" width={144} densities={[1, 2]} />
+	<Image class="device-shot" src={keyGraph} alt="Key showing the price now above a bar chart of the day" width={144} densities={[1, 2]} />
+	<Image class="device-shot" src={keyLowest} alt="Key showing the lowest price of the day and its time" width={144} densities={[1, 2]} />
+</div>
+
+On a Stream Deck +, link the dials into one wide chart of the day, with the price breakdown on the right:
+
+<Image class="device-shot" src={dialLinked} alt="Four linked touch-strip panels: a bar chart of the day's prices and the breakdown of the selected quarter-hour" width={800} densities={[1, 2]} />
+
+## Features
+
+<CardGrid>
+	<Card title="All-in prices" icon="approve-check">
+		Market price plus your supplier's purchase fee, energy tax and 21% VAT. Or show the market price only.
+	</Card>
+	<Card title="Today and tomorrow" icon="seti:clock">
+		Now, next quarter-hour, and the day's lowest, highest and average. Tomorrow's prices appear once they are published, early in the afternoon.
+	</Card>
+	<Card title="Colour at a glance" icon="star">
+		Green for the cheapest third of the day, amber for the middle, red for the most expensive.
+	</Card>
+	<Card title="No account needed" icon="seti:lock">
+		Prices come from a public source. No login, no personal data.
+	</Card>
+</CardGrid>
+
+## Requirements
+
+- Stream Deck app 7.1 or later, on macOS 12+ or Windows 10+
+- An internet connection
+- Works on every Stream Deck with keys; the dial features need a Stream Deck +
+
+## Where the prices come from
+
+Market prices are the EPEX day-ahead prices for the Netherlands, fetched from EnergyZero's public price service. The energy tax is taken from the same source. This plugin is not affiliated with EnergyZero, EPEX SPOT or any energy supplier.
+
+Prices are for information. Your supplier's invoice is what you pay.

@@ -1,0 +1,37 @@
+---
+title: Brightforge Plugins
+description: Support and documentation for Brightforge Stream Deck plugins.
+template: splash
+hero:
+  tagline: Stream Deck plugins for your home energy. Documentation, help and contact.
+  actions:
+    - text: Energy Prices NL
+      link: energy-prices/
+      icon: right-arrow
+    - text: Contact support
+      link: support/
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## Plugins
+
+<CardGrid>
+	<LinkCard
+		title="Energy Prices NL"
+		description="Dynamic electricity prices per quarter-hour for the Netherlands, all-in with your supplier's fee, energy tax and VAT."
+		href="energy-prices/"
+	/>
+</CardGrid>
+
+## Need help?
+
+<CardGrid>
+	<Card title="Read the FAQ" icon="information">
+		Most questions are answered in the FAQ of each plugin.
+	</Card>
+	<Card title="Contact us" icon="email">
+		Still stuck? See the [support page](support/) for how to reach us.
+	</Card>
+</CardGrid>

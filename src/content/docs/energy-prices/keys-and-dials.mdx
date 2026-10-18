@@ -1,0 +1,50 @@
+---
+title: Keys and dials
+description: What each key and dial setting does, and how to use the Stream Deck + dials.
+---
+
+import { Image } from 'astro:assets';
+import keyNow from '../../../assets/energy-prices/key-now.png';
+import keyGraph from '../../../assets/energy-prices/key-now-graph.png';
+import keyHighest from '../../../assets/energy-prices/key-highest.png';
+import dialSingle from '../../../assets/energy-prices/dial-single.png';
+import dialLinked from '../../../assets/energy-prices/dial-linked.png';
+
+## Energy Price key
+
+<div class="shots">
+	<Image class="device-shot" src={keyNow} alt="Price now as a figure" width={144} densities={[1, 2]} />
+	<Image class="device-shot" src={keyGraph} alt="Price now with a chart of the day" width={144} densities={[1, 2]} />
+	<Image class="device-shot" src={keyHighest} alt="Highest price of the day" width={144} densities={[1, 2]} />
+</div>
+
+| Setting | Options |
+| --- | --- |
+| **Show** | Price now · Next quarter-hour · Lowest of the day · Highest of the day · Average of the day |
+| **Day** | Today · Tomorrow. Applies to lowest, highest and average. |
+
+**Press the key** to switch between the figure and a chart of the day. In the chart, past quarter-hours are dimmed, the selected one is white and a small marker shows *now*.
+
+The figure's colour tells you where it sits in the day: **green** for the cheapest third, **amber** for the middle and **red** for the most expensive third.
+
+## Energy Prices dial (Stream Deck +)
+
+<Image class="device-shot" src={dialSingle} alt="One dial: the selected quarter-hour's price above a chart of the day" width={200} densities={[1, 2]} />
+
+| Control | What it does |
+| --- | --- |
+| **Rotate** | Move through the day by quarter-hour. Past midnight it continues into tomorrow, once those prices are known. |
+| **Press and rotate** | Move by the hour. |
+| **Press** | Back to *now*. |
+| **Tap the touch strip** | Switch between today and tomorrow. |
+
+| Setting | Options |
+| --- | --- |
+| **Link** | Join neighbouring dials that have Link on into one wide chart. |
+| **Start on** | Today · Tomorrow (when published). The day shown after a press. |
+
+### Linked dials
+
+Turn on **Link** for two or more dials next to each other. They share one chart, and the rightmost dial shows how the selected price adds up: market price, purchase fee, energy tax and VAT. Rotate any of them to move through the day.
+
+<Image class="device-shot" src={dialLinked} alt="Four linked dials with a wide chart and the price breakdown" width={800} densities={[1, 2]} />

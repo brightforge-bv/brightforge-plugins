@@ -1,0 +1,29 @@
+/* Brightforge accents: amber, matching the plugin logos. */
+:root {
+	--sl-color-accent-low: #3a2a05;
+	--sl-color-accent: #d18a00;
+	--sl-color-accent-high: #ffe0a3;
+}
+
+:root[data-theme='light'] {
+	--sl-color-accent-low: #ffe9bf;
+	--sl-color-accent: #a86a00;
+	--sl-color-accent-high: #4a2f00;
+}
+
+/* Key and touch-strip renders: keep their pixels crisp and give them the device's dark frame. */
+.device-shot {
+	display: inline-block;
+	margin: 0.25rem;
+	border-radius: 14px;
+	background: #000;
+	padding: 6px;
+	image-rendering: auto;
+}
+
+.shots {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	align-items: flex-end;
+}
